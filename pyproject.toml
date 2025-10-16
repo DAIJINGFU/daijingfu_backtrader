@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jq-backtest-standalone-full"
+version = "2.0.0"
+description = "JoinQuant-compatible backtest engine with frontend (standalone)"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi>=0.109",
+    "uvicorn[standard]>=0.23",
+    "pandas>=2.1",
+    "numpy>=1.25",
+    "backtrader>=1.9.78.123",
+    "loguru>=0.7",
+    "pytz>=2023.3",
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pydantic>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*", "interfaces*"]
+exclude = ["frontend*", "tests*", "docs*", "scripts*", "data*"]

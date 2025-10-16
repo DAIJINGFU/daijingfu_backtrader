@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node.js / Frontend
+node_modules/
+frontend/dist/
+frontend/node_modules/
+package-lock.json
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 环境变量
+.env
+
+# 数据和日志
+data/
+logs/
+*.log
+
+# macOS
+.DS_Store
+
+# 临时文件
+*.tmp
+*.bak
+*.orig
