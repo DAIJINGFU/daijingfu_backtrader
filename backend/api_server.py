@@ -17,12 +17,14 @@ load_dotenv()
 
 # 导入回测模块
 from backend.jq_backtest.engine import JQBacktestEngine
-from backend.data_provider import SimpleCSVDataProvider
+# Use migrated backtest_origin data loader via adapter
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider
 
 # 初始化数据提供者
 # 优先使用环境变量中的DATA_ROOT，否则使用默认测试数据
 DATA_DIR = os.getenv('DATA_ROOT') or str(Path(__file__).parent.parent / "data" / "sample")
-data_provider = SimpleCSVDataProvider(DATA_DIR)
+# instantiate the adapter-backed provider
+data_provider = BacktestOriginDataProvider(data_root=DATA_DIR)
 
 # 初始化回测引擎
 engine = JQBacktestEngine(csv_provider=data_provider)

@@ -4,7 +4,7 @@ os.environ['DATA_ROOT'] = '/Volumes/ESSD/stockdata/'
 
 from datetime import datetime
 from backend.jq_backtest.engine import JQBacktestEngine
-from backend.data_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 import json
 
 # 初始化

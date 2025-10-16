@@ -156,7 +156,7 @@ jq-backtest-standalone-full/
 ### 使用数据提供者
 
 ```python
-from backend.data_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 from pathlib import Path
 
 # 初始化
@@ -178,7 +178,7 @@ securities = provider.list_securities()
 
 ```python
 from backend.jq_backtest.engine import JQBacktestEngine
-from backend.data_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 from datetime import datetime
 
 # 创建引擎

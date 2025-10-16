@@ -234,6 +234,7 @@ class JQBacktestEngine:
 ```python
 # 初始化数据提供者和引擎
 DATA_DIR = Path(__file__).parent.parent / "data" / "sample"
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 data_provider = SimpleCSVDataProvider(str(DATA_DIR))
 engine = JQBacktestEngine(data_provider=data_provider)
 

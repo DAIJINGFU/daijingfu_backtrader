@@ -1,5 +1,5 @@
 from backend.jq_backtest.engine import JQBacktestEngine
-from backend.data_provider.simple_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 from datetime import datetime
 import traceback
 

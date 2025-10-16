@@ -14,7 +14,7 @@ import json
 # 添加项目路径
 sys.path.insert(0, str(Path(__file__).parent))
 
-from backend.data_provider.simple_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 
 
 class TestResult:

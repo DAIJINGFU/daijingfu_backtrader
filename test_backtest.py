@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """测试回测引擎"""
 from backend.jq_backtest.engine import JQBacktestEngine
-from backend.data_provider.simple_provider import SimpleCSVDataProvider
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 from datetime import datetime
 
 csv_provider = SimpleCSVDataProvider('/Volumes/ESSD/stockdata/')

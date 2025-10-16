@@ -68,6 +68,7 @@ DATA_ROOT=/Volumes/ESSD/stockdata/
 
 ### 格式检测
 ```python
+from backend.jq_backtest.data_provider_adapter import BacktestOriginDataProvider as SimpleCSVDataProvider
 provider = SimpleCSVDataProvider('/Volumes/ESSD/stockdata/')
 # ✅ Detected Tushare-style format (1d_1w_1m)
 ```
